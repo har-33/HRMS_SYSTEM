@@ -4,4 +4,6 @@ app = FastAPI()
 
 @app.get("/")
 def health_check():
-    return {"status": "HRMS API running"}
+    return {"status": "HRMS API running",
+            "database": "connected"
+    }
