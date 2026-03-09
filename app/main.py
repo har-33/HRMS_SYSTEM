@@ -1,9 +1,6 @@
 from fastapi import FastAPI
+from app.routes.auth_routes import router as auth_router
 
 app = FastAPI()
 
-@app.get("/")
-def health_check():
-    return {"status": "HRMS API running",
-            "database": "connected"
-    }
+app.include_router(auth_router)
