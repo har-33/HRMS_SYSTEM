@@ -12,3 +12,4 @@ class User(Base):
     password_hash = Column(String)
     role = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
+

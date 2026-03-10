@@ -5,7 +5,10 @@ from app.services.auth_service import create_user, login_user
 from app.database.session import get_db
 from app.utils.security import get_current_user
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/auth",
+    tags=["Auth"]
+)
 
 @router.post("/register")
 def register_user(user: UserRegister, db: Session = Depends(get_db)):
