@@ -5,7 +5,7 @@ from sqlalchemy import pool
 
 from alembic import context
 from app.database.connection import Base
-from app.models import user,department
+from app.models import user,department,employee
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
